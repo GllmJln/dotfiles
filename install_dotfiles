@@ -22,7 +22,8 @@ ln -sf $path/config/mpDris2 $HOME/.config/mpDris2
 ln -sf $path/config/mpv $HOME/.config/mpv
 
 [ ! -d $HOME/.config/nvim ] && mkdir $HOME/.config/nvim
-ln -sf $path/.config/nvim $HOME/.config/nvim
+# ln -sf $path/.config/nvim $HOME/.config/nvim
+# ln -sf $path/.config/nvim $HOME/.config/nvim
 
 [ ! -d $HOME/.config/ncmpcpp ] && mkdir $HOME/.config/ncmpcpp
 ln -sf $path/.config/ncmpcpp $HOME/.config/ncmpcpp
@@ -37,6 +38,6 @@ ln -sf $path/config/sxhkd $HOME/.config/sxhkd
 ln -sf $path/config/sxiv $HOME/.config/sxiv
 
 [ -d $HOME/.config/zathura ] && rm -rf $HOME/.config/zathura
-ln -sf $path/config/zathura/ $HOME/.config/zathura/
+ln -sf $path/config/zathura $HOME/.config/zathura
 
 ln -sf $path/config/mimeapps.list $HOME/.config/mimeapps.list
