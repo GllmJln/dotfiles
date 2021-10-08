@@ -26,6 +26,7 @@ Of course these are a work in progress, although the work on dotfiles never real
   - [ ] `Cmp`
     - [ ] Better autocomplete bindings
     - [ ] Turn off LaTeX math complete for non-`.tex` files
+- [ ] Add git plugins
 - [ ] Toggle transparent background function
 
 ## Sxhkd
