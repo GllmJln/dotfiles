@@ -1,0 +1,59 @@
+# Basic Settings
+
+set highlight-transparency .4
+set zoom-center "true"
+set selection-clipboard clipboard
+set render-loading "false"
+set adjust-open "width"
+
+map <Space> toggle_index
+map K zoom in
+map J zoom out
+map p print
+map w recolor
+
+set notification-error-bg       rgba(32,29,33,0.75) # bg
+set notification-error-fg       "#9d0006" # bright:red
+set notification-warning-bg     rgba(32,29,33,0.75) # bg
+set notification-warning-fg     "#b57614" # bright:yellow
+set notification-bg             rgba(32,29,33,0.75) # bg
+set notification-fg             "#79740e" # bright:green
+
+set completion-bg               "#d5c4a1" # bg2
+set completion-fg               "#c5bac4" # fg
+set completion-group-bg         rgba(32,29,33,0.75) # bg1
+set completion-group-fg         "#928374" # gray
+set completion-highlight-bg     "#076678" # bright:blue
+set completion-highlight-fg     "#d5c4a1" # bg2
+
+# Define the color in index mode
+# set index-bg                    "#d5c4a1" # bg2
+set index-bg                    rgba(32,29,33,0.75) # bg
+set index-fg                    "#f29a02"
+set index-active-bg             "#e718f9"
+set index-active-fg             "#ddea25"
+
+set inputbar-bg                 rgba(32,29,33,0.75) # bg
+set inputbar-fg                 "#c5bac4" # fg
+
+set statusbar-bg                rgba(0,0,0,0.7) # bg
+set statusbar-fg                "#b5b1a1" # fg
+
+set highlight-color             "#b57614" 
+set highlight-active-color      "#af3a03" 
+
+set default-bg                  rgba(32,29,33,0.75) # bg
+set default-fg                  rgba(0,0,0,0) # fg
+set render-loading              true
+set render-loading-bg           rgba(32,29,33,0.75) # bg
+set render-loading-fg           "#c5bac4" # fg
+
+# Recolor
+set recolor-lightcolor          rgba(0,0,0,0) # bg
+set recolor-darkcolor           "#c5bac4" # fg
+set recolor                     "true"
+
+# Synctex
+
+set synctex true
+set synctex-editor-command "nvim --remote-silent +%{line} %{input}"

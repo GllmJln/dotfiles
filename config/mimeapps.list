@@ -1,0 +1,11 @@
+[Added Associations]
+text/plain=nvim.desktop;vim.desktop;
+application/vnd.openxmlformats-officedocument.wordprocessingml.document=libreoffice-writer.desktop;
+inode/symlink=firefox.desktop;
+video/x-matroska=mpv.desktop;vifm.desktop;
+application/pdf=libreoffice-writer.desktop;
+audio/mpeg=spotify.desktop;
+
+[Default Applications]
+video/x-matroska=mpv.desktop;
+application/pdf=pdf.desktop;

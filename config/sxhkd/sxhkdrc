@@ -1,0 +1,75 @@
+## Launching stuff
+
+Print
+  Screenshots
+
+super + c
+  calc.sh
+
+XF86Calculator
+  calc.sh
+
+super + w
+  firefox
+
+super + s
+  spotify
+
+super + shift + w
+  Wallpaper
+
+super + shift + s
+  Search
+
+super + e
+  pcmanfm
+
+super + shift + e
+  st -e vifm
+
+
+## Volume and Music
+
+super + F11
+  volumeDisplay.sh up
+
+super + F10
+  volumeDisplay.sh down
+
+super + F9
+  volumeDisplay.sh mute
+
+XF86AudioRaiseVolume
+  volumeDisplay.sh up
+
+XF86AudioLowerVolume
+  volumeDisplay.sh down
+
+XF86AudioMute
+  volumeDisplay.sh mute
+
+XF86AudioStop
+  playerctl -s -p playerctld stop && pkill -RTMIN+8 dwmblocks
+
+XF86AudioPlay
+  playerctl -s -p playerctld play-pause && pkill -RTMIN+8 dwmblocks
+
+XF86AudioStop
+  playerctl -s -p playerctld stop && pkill -RTMIN+8 dwmblocks
+
+XF86AudioNext
+  playerctl -s -p playerctld next && pkill -RTMIN+8 dwmblocks
+
+XF86AudioPrev
+  playerctl -s -p playerctld previous && pkill -RTMIN+8 dwmblocks
+
+super + n
+  st ncmpcpp
+
+
+## Display
+super + d
+  Screen default
+
+super + shift + d
+  Screen
