@@ -24,7 +24,7 @@ HISTCONTROL=ignoredups:erasedups
 shopt -s histappend
 export HISTSIZE=100000
 export HISTSIZE=
-export HISTTIMEFORMAT="[%F %T] "
+# export HISTTIMEFORMAT="[%F %T] "
 
 alias vim="nvim"
 

@@ -73,3 +73,6 @@ super + d
 
 super + shift + d
   Screen
+
+super + shift + b
+  Brightness
