@@ -24,13 +24,13 @@ return require('packer').startup(function()
         "hrsh7th/nvim-cmp",
         requires = {
             "hrsh7th/cmp-nvim-lsp", "hrsh7th/cmp-buffer",
-            'quangnguyen30192/cmp-nvim-ultisnips', 'hrsh7th/cmp-nvim-lua',
+            {'quangnguyen30192/cmp-nvim-ultisnips', after = "nvim-cmp"}, 'hrsh7th/cmp-nvim-lua',
             'octaltree/cmp-look', 'hrsh7th/cmp-path', 'hrsh7th/cmp-calc',
             'f3fora/cmp-spell', 'hrsh7th/cmp-emoji','kdheepak/cmp-latex-symbols'
         }
     }
 
-  use 'kabouzeid/nvim-lspinstall'
+  -- use 'kabouzeid/nvim-lspinstall'
   use {
     "onsails/lspkind-nvim",
     config = function()

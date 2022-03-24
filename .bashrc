@@ -28,7 +28,10 @@ export HISTSIZE=
 
 alias vim="nvim"
 
+alias wal="(sxiv -r -t Pictures/Wallpapers &)"
+
 alias ls="ls --group-directories-first --color=auto"
+alias idea="(sudo _JAVA_AWT_WM_NONREPARENTING=1 idea &)"
 
 function countdown(){
    date1=$((`date +%s` + $1)); 

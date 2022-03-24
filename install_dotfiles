@@ -22,6 +22,7 @@ ln -sf $path/config/mpDris2 $HOME/.config/mpDris2
 ln -sf $path/config/mpv $HOME/.config/mpv
 
 [ ! -d $HOME/.config/nvim ] && mkdir $HOME/.config/nvim
+echo "testing" >> $HOME/.config/nvim/testi
 # ln -sf $path/.config/nvim $HOME/.config/nvim
 # ln -sf $path/.config/nvim $HOME/.config/nvim
 

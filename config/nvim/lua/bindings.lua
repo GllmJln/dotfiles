@@ -13,7 +13,7 @@ end
 
 -- Terminal mappings to come
 
--- Resize splits
+-- Resize Splits
 
 map('<M-o>', ':resize -2<CR>')
 map('<M-i>', ':resize +2<CR>')
