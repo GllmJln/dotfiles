@@ -8,7 +8,7 @@ dunst &
 dwmblocks &
 picom --experimental-backends &
 numlockx &
-(sleep 0.2 && xrandr --output eDP1 --right-of HDMI1 ) &
+(sleep 0.2 && xrandr --output eDP1 --left-of HDMI1 ) &
 [ ! -s ~/.config/mpd/pid ] && mpd &
 mpDris2 &
 sxhkd &

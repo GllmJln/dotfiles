@@ -1,2 +1,3 @@
-config/mpd/state
-config/nvim/plugin/packer_compiled.lua
+.config/mpd/state
+.config/nvim/plugin/packer_compiled.lua
+
