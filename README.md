@@ -5,6 +5,12 @@ Of course these are a work in progress, although the work on dotfiles never real
 
 GNU stow is recommended for insallation of these dotfiles as there is no automatic symlink script. Also GNU stow is better and makes maintaining dotfiles easier.
 
+#DISCLAMER
+
+Basically do not install these dotfiles. I will not accept any responsibility for any damage to anything caused by installation of these files. These are really intended for my personal use only.
+
+Why would you want to insall them anyways?
+
 # To do
 
 - [ ] Organise these EVERYTHING more
@@ -30,6 +36,7 @@ GNU stow is recommended for insallation of these dotfiles as there is no automat
     - [ ] Turn off LaTeX math complete for non-`.tex` files
 - [ ] Add git plugins
 - [ ] Toggle transparent background function
+- [ ] Implement snippets, possibly made compatible with `VS code` 👀snippets
 
 ## Sxhkd
 - [ ] Bind more things
