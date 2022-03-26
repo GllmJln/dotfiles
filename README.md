@@ -3,6 +3,8 @@
 Personal dotfiles. Configs for some of the programs I use. \
 Of course these are a work in progress, although the work on dotfiles never really stops. Just don't want to loose all these settings/configs if my computer dies.
 
+GNU stow is recommended for insallation of these dotfiles as there is no automatic symlink script. Also GNU stow is better and makes maintaining dotfiles easier.
+
 # To do
 
 - [ ] Organise these EVERYTHING more
