@@ -5,7 +5,7 @@ Of course these are a work in progress, although the work on dotfiles never real
 
 GNU stow is recommended for insallation of these dotfiles as there is no automatic symlink script. Also GNU stow is better and makes maintaining dotfiles easier.
 
-#DISCLAMER
+# DISCLAMER
 
 Basically do not install these dotfiles. I will not accept any responsibility for any damage to anything caused by installation of these files. These are really intended for my personal use only.
 
