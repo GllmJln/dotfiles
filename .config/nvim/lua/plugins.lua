@@ -84,8 +84,7 @@ return require('packer').startup(function()
 
   }
 -- Themes
-	use 'morhetz/gruvbox'
-  use 'joshdick/onedark.vim'
+  use 'navarasu/onedark.nvim'
 
 -- Bar and esthetics
 use {
