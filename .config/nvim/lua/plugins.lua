@@ -1,10 +1,9 @@
 vim.cmd([[
-    augroup PACKER_COMPILE_ONCHANGE
-        autocmd!
-        autocmd BufWritePost plugins.lua source <afile> | PackerSync
-    augroup END
+  augroup packer_user_config
+    autocmd!
+    autocmd BufWritePost plugins.lua source <afile> | PackerCompile
+  augroup end
 ]])
-
 
 local fn = vim.fn
 local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
@@ -76,17 +75,23 @@ return require('packer').startup(function()
   }
   use {
       'kyazdani42/nvim-tree.lua',
-      requires = 'kyazdani42/nvim-web-devicons',
-      config = function() require'nvim-tree'.setup {} end
+      requires = {
+      'kyazdani42/nvim-web-devicons',
+      },
+      config = function() require'nvim-tree'.setup {}
+         
+      end
+
   }
 -- Themes
 	use 'morhetz/gruvbox'
   use 'joshdick/onedark.vim'
 
 -- Bar and esthetics
-	use 'vim-airline/vim-airline'
-	use 'vim-airline/vim-airline-themes'
-  use 'ryanoasis/vim-devicons'
+use {
+  'nvim-lualine/lualine.nvim',
+  requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+}
 
 
 -- binding helper
@@ -98,7 +103,7 @@ return require('packer').startup(function()
     }
   end
 }
-	if fn.len(fn.globpath(PACKER_PATH, "*", 0, 1)) == 1 then
-		vim.cmd([[PackerSync]])
-	end
-end)
+  if packer_bootstrap then
+    require('packer').sync()
+  end
+	end)

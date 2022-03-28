@@ -9,6 +9,7 @@ require('plugins/vimtex')
 require('plugins/autopairs')
 require('plugins/telescope')
 require('plugins/colorizer')
+require('plugins/lualine')
 
 
 vim.cmd[[

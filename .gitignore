@@ -1,3 +1,4 @@
 .config/mpd/state
 .config/nvim/plugin/packer_compiled.lua
+.config/ncmpcpp/error.log
 
