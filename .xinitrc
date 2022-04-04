@@ -8,7 +8,7 @@ dunst &
 dwmblocks &
 picom --experimental-backends &
 numlockx &
-(sleep 0.2 && Screen default) &
+Screen default &
 [ ! -s ~/.config/mpd/pid ] && mpd &
 mpDris2 &
 sxhkd &
@@ -16,4 +16,5 @@ sxhkd &
 export _JAVA_AWT_WM_NONREPARENTING=1 &
 export AWR_TOOLKIT=MToolkit &
 wmname LG3D &
+xss-lock slock &
 exec dwm
