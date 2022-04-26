@@ -17,7 +17,10 @@ return require('packer').startup(function()
     use {'wbthomason/packer.nvim', opt = true}
 
     -- LSP and COMPLETION
-    use "neovim/nvim-lspconfig"
+    use {
+      "neovim/nvim-lspconfig",
+      "williamboman/nvim-lsp-installer",
+    }
     -- Autocompletion
         use {
         "hrsh7th/nvim-cmp",
@@ -30,7 +33,6 @@ return require('packer').startup(function()
         }
     }
 
-  -- use 'kabouzeid/nvim-lspinstall'
   use {
     "onsails/lspkind-nvim",
     config = function()

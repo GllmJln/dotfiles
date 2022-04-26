@@ -1,6 +1,6 @@
 require('plugins')
 require('completion/cmp')
--- require('completion/lsp-install')
+require('completion/lsp-installer')
 require('general')
 require('bindings')
 require('plugins/startify')
