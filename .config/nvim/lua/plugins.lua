@@ -94,6 +94,13 @@ use {
   requires = { 'kyazdani42/nvim-web-devicons', opt = true }
 }
 
+use {
+  "folke/trouble.nvim",
+  requires = "kyazdani42/nvim-web-devicons",
+  config = function()
+  end
+}
+
 
 -- binding helper
   use {
