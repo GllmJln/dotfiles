@@ -2,6 +2,11 @@
 
 # xrandr --setprovideroutputsource modesetting NVIDIA-0
 # xrandr --auto
+#
+
+# proton-vpn fix
+gnome-keyring-deamon --start &
+nm-applet &
 
 
 dunst &
