@@ -1,0 +1,10 @@
+#!/bin/bash
+REPOS="$HOME/Repos"
+REPO_NAME="dotfiles"
+USER="GllmJln"
+
+[ ! -d "$REPOS" ] && mkdir -p "$REPOS" && git -C $REPOS clone "git@github.com:$USER/$REPO_NAME.git"
+
+cd "$REPOS/$REPO_NAME"
+
+stow -d $REPOS -t ~/ $REPO_NAME

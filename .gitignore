@@ -3,4 +3,5 @@
 .config/ncmpcpp/error.log
 .config/mpd/database
 .config/mpd/sticker.sql
+.config/mimeapps.list
 
