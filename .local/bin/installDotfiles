@@ -6,5 +6,6 @@ USER="GllmJln"
 [ ! -d "$REPOS" ] && mkdir -p "$REPOS" && git -C $REPOS clone "git@github.com:$USER/$REPO_NAME.git"
 
 cd "$REPOS/$REPO_NAME"
+git pull
 
 stow -d $REPOS -t ~/ $REPO_NAME

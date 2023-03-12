@@ -1,0 +1,54 @@
+#!/bin/bash
+
+case $1 in
+  "default") screen="Default"
+esac
+
+declare -a screens=(
+"Default"
+"Laptop Screen"
+"HDMI"
+"Both"
+)
+
+declare -a options=(
+"To the Right"
+"To the Left"
+)
+
+Screen=$(xrandr | grep eDP | cut -f 1 -d ' ')
+HDMI=$(xrandr | grep HDMI | cut -f 1 -d ' ')
+
+if [[ -z "$screen" ]]; then
+  screen=$(printf '%s\n' "${screens[@]}" | dmenu -i -l 10 -p 'Which screen do you want to display?')
+fi
+
+case $screen in
+  "HDMI")
+  	xrandr --output $HDMI --auto 
+	  xrandr --output $Screen --off
+    ;;
+  "Laptop Screen")
+	  xrandr --output $Screen --auto
+	  xrandr --output $HDMI --off
+    ;;
+
+  "Default" | "Both")
+	  xrandr --output $HDMI --auto
+	  xrandr --output $Screen --auto
+    if [[ $screen == "Default" ]]; then
+      pos="${options[0]}"
+    else
+  	  pos=$(printf '%s\n' "${options[@]}" | dmenu -i -l 10 -p 'Position of HDMI:')
+    fi
+
+    case $pos in
+      "${options[0]}")
+	  	xrandr --output $HDMI --right-of $Screen
+        ;;
+      "${options[1]}")
+	  	xrandr --output $HDMI --left-of $Screen
+        ;;
+    esac
+    ;;
+esac
