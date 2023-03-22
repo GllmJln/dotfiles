@@ -1,0 +1,39 @@
+#!/bin/bash
+
+declare -a options=(
+"Laptop Screen"
+"HDMI"
+"Both"
+)
+
+declare -a bright=(
+"0.1"
+"0.2"
+"0.3"
+"0.4"
+"0.5"
+"0.6"
+"0.7"
+"0.8"
+"0.9"
+"1"
+)
+
+Screen=$(xrandr | grep eDP | cut -f 1 -d ' ')
+HDMI=$(xrandr | grep HDMI | cut -f 1 -d ' ')
+
+choice=$(printf '%s\n' "${options[@]}" | dmenu -i -l 10 -p 'What Screen ?')
+brightness=$(printf '%s\n' "${bright[@]}" | dmenu -i -l 10 -p 'Brightness:')
+
+if [[ "$choice" == "HDMI" ]]; then
+	xrandr --output $HDMI --brightness $brightness && exit 1
+
+elif [[ "$choice" == "Laptop Screen" ]]; then
+	xrandr --output $Screen --brightness $brightness && exit 1
+
+elif [[ "$choice" == "Both" ]]; then
+	xrandr --output $HDMI --brightness $brightness &&
+	xrandr --output $Screen --brightness $brightness && exit 1
+fi
+
+

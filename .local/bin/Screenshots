@@ -1,0 +1,41 @@
+#!/bin/bash
+
+declare -a opts=(
+"Selection"
+"Enter a name"
+"Enter a path"
+"Take screenshot"
+"Save selection and copy to clipboard"
+"Save whole screenshot and copy to clipboard"
+)
+
+function ask_info () {
+  choice=$(printf '%s\n' "${opts[@]}" | dmenu -i -l 10 -p 'Select an option 📷:')
+  echo "$choice"
+}
+
+path=$HOME/Pictures/Screenshots
+name=$(date +%s).png
+
+while true; do
+  ask_info
+  if [[ "$choice" == "${opts[0]}" ]]; then
+    maim --select "$path/$name"
+  elif [[ "$choice" == "${opts[1]}" ]]; then
+    name="$(echo $name | dmenu -p "${opts[1]}:").png"
+    continue
+  elif [[ "$choice" == "${opts[2]}" ]]; then
+    path="$(echo $path | dmenu -i -l 10 -p "${opts[2]}:")"
+    path="$(echo $path | sed "s/~/\/home\/$USER/g")"
+    continue
+  elif [[ "$choice" == "${opts[3]}" ]]; then
+    sleep 0.4
+    maim "$path/$name"
+  elif [[ "$choice" == "${opts[4]}" ]]; then
+    maim --select | tee "$path/$name" | xclip -selection clipboard -t image/png
+  elif [[ "$choice" == "${opts[5]}" ]]; then
+    sleep 0.4
+    maim | tee "$path/$name" | xclip -selection clipboard -t image/png
+  fi
+  break
+done  
