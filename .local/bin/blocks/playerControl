@@ -1,0 +1,29 @@
+#!/bin/bash
+
+
+stat=$(playerctl -s -p playerctld metadata --format "{{status}}")
+
+case $stat in
+  "Playing") stat="▶️";;
+  "Paused") stat="⏸️";;
+  "Stopped") stat="⏹️";;
+esac
+
+if [[ ! -z "$stat" ]]; then
+
+  title=$(playerctl -s -p playerctld metadata --format "{{title}}")
+  artist=$(playerctl -s -p playerctld metadata --format "{{artist}}")
+  [[ -z $artist ]] && disp="$title - " || disp="$title - $artist - "
+
+  len=${#disp}
+  disp="$disp$disp$disp"
+  
+  pos=$(cat /tmp/playerctl || 0 )
+
+  if [[ $pos -ge $len ]]; then
+    pos=0
+  fi
+  echo "$stat${disp:$pos:12}"
+  ((pos = pos + 1))
+  echo "$pos" > /tmp/playerctl
+fi
