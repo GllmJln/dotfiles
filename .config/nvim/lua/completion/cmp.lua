@@ -59,11 +59,11 @@ cmp.setup {
 }
 
 -- Autopairs
-require("nvim-autopairs.completion.cmp").setup({
-    map_cr = false,
-    map_complete = true,
-    auto_select = true
-})
+-- require("nvim-autopairs.completion.cmp").setup({
+--     map_cr = false,
+--     map_complete = true,
+--     auto_select = true
+-- })
 
 
 

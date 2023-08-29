@@ -1,5 +1,6 @@
 #!/bin/bash
-REPOS="$HOME/Repos"
+REPO_FOLDER_NAME="${DOTFILES_REPO_FOLDER:-Repos}"
+REPOS="$HOME/$REPO_FOLDER_NAME"
 REPO_NAME="dotfiles"
 USER="GllmJln"
 
