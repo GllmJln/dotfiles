@@ -79,7 +79,11 @@ function stopwatch(){
   done
 }
 
-
+function cpr() {
+  ticket="$(git branch --show-current | grep -Eo '(CB|cb)2-[0-9]+' | cut -d '-' -f 2)"
+  body="$(sed s/XXXX/$ticket/g ./.github/pull_request_template | sed s/One line description/$1/g)"
+  explorer.exe $(gh pr create --title "feat('${ticket,,}'): $1")
+}
 
 # alias
 alias vim="nvim"
@@ -124,6 +128,10 @@ export PATH="$PATH:$HOME/.local/bin:$HOME/bin:$HOME/sonar-scanner/bin"
 
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
+fi
+
+if [ -f ~/.profile ]; then
+    . ~/.profile
 fi
 
 
